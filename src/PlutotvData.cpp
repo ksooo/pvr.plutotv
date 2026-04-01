@@ -656,6 +656,7 @@ std::string PlutotvData::GetJWT()
 
     Curl curl;
     curl.AddHeader("User-Agent", PLUTOTV_USER_AGENT);
+    curl.AddHeader("X-Forwarded-For", m_forwardedFor);
 
     int statusCode{500};
     const std::string json{curl.Get(url, statusCode)};
@@ -697,6 +698,7 @@ std::string PlutotvData::GetChannelsJson() const
   curl.AddHeader("origin", "https://pluto.tv");
   curl.AddHeader("referer", "https://pluto.tv/");
   curl.AddHeader("user-agent", PLUTOTV_USER_AGENT);
+  curl.AddHeader("X-Forwarded-For", m_forwardedFor);
 
   int statusCode{500};
   const std::string json{curl.Get(url, statusCode)};
@@ -727,6 +729,7 @@ std::string PlutotvData::GetCategoriesJson() const
   curl.AddHeader("origin", "https://pluto.tv");
   curl.AddHeader("referer", "https://pluto.tv/");
   curl.AddHeader("user-agent", PLUTOTV_USER_AGENT);
+  curl.AddHeader("X-Forwarded-For", m_forwardedFor);
 
   int statusCode{500};
   const std::string json{curl.Get(url, statusCode)};
@@ -760,6 +763,7 @@ std::string PlutotvData::GetEpgJson(time_t start) const
   curl.AddHeader("origin", "https://pluto.tv");
   curl.AddHeader("referer", "https://pluto.tv/");
   curl.AddHeader("user-agent", PLUTOTV_USER_AGENT);
+  curl.AddHeader("X-Forwarded-For", m_forwardedFor);
 
   int statusCode{500};
   const std::string json{curl.Get(url, statusCode)};

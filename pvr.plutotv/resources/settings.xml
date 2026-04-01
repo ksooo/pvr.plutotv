@@ -25,6 +25,23 @@
           <default>true</default>
           <control type="toggle"/>
         </setting>
+        <setting id="locations" type="list[string]" label="30011" help="">
+            <level>0</level>
+            <default>local</default>
+            <constraints>
+                <options>
+                    <option label="30012">local</option>
+                    <option label="30013">us</option>
+                    <option label="30014">de</option>
+                </options>
+                <delimiter>,</delimiter>
+                <minimumitems>1</minimumitems>
+            </constraints>
+            <control type="list" format="string">
+                <multiselect>true</multiselect>
+                <hidevalue>false</hidevalue>
+            </control>
+        </setting>
       </group>
     </category>
     <category id="debug" label="30040" help="30300">

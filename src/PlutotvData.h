@@ -102,4 +102,23 @@ private:
 
   std::string m_jwt;
   std::chrono::time_point<std::chrono::steady_clock> m_jwtTimestamp;
+
+  std::string m_forwardedFor{""}; // use local IP
+//  std::string m_forwardedFor{"76.81.9.69"}; // us_west
+//  std::string m_forwardedFor{"91.97.253.145"}; // de
+
+// Argentina
+// Brazil
+// Canada
+// Chile
+// Denmark
+// France
+// Germany
+// Great Britain
+// Italy
+// Mexico
+// Norway
+// Spain
+// Sweden
+// USA
 };

@@ -38,6 +38,22 @@ msgctxt "#30010"
 msgid "Coloured channel logos"
 msgstr ""
 
+msgctxt "#30011"
+msgid "Locations"
+msgstr ""
+
+msgctxt "#30012"
+msgid "Current Geo Location"
+msgstr ""
+
+msgctxt "#30013"
+msgid "United States"
+msgstr ""
+
+msgctxt "#30014"
+msgid "Germany"
+msgstr ""
+
 msgctxt "#30040"
 msgid "Debug"
 msgstr ""
